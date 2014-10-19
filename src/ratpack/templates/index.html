@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Groovy at Gr8Ladies</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="An introduction to the programming language Groovy for ICC14">
+		<meta name="author" content="Jenn Strater">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -15,10 +15,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="css/main.css">
 
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -43,26 +45,90 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h1>Groovy at Gr8Ladies</h1>
+					<h3>Iowa Code Camp 14</h3><h3>November 1, 2014</h3>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>Created by <a href="http://sites.google.com/site/jenniferstrater" target="_blank">Jenn Strater</a> / <a href="http://twitter.com/jennstrater" target="_blank">@jennstrater</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
+					<h2>Who am I?</h2>
+					<a href="http://altegrahealth.com" target="_blank"><img class="no-box" src="images/altegra.png"/></a>
+					<p>Software Engineer -- Healthcare Communications Division -- Minneapolis, MN</p>
 					</p>
-
+					<a href="http://gr8ladies.org" target="_blank"><img class="no-box" src="images/gr8ladiesSquare.jpg" height="150px" width="150px"/></a>
+					<p>Co-Founder</p>
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+						Of course you are probably wondering who we are.  First, I’m Jenn Strater.  I’m a software engineer in the healthcare communications division of a healthcare services company called Altegra Health.
+						After hours, I work with my co-founder Allison to run the organization Gr8Ladies.  My focus in gr8ladies is on retention and professional development within the Groovy ecosystem.
 					</aside>
 				</section>
 
-				<!-- Example of nested vertical slides -->
+				<section>
+					<h2>What's Groovy</h2>
+					<ul>
+						<li>Dynamic, compiled language for the Java Virtual Machine(JVM).</li>
+						<li>Interoperable with existing Java libraries</li>
+						<li>Used by many major companies including:</li>
+					</ul>
+					<div>
+						<img class="horizontal-list-element no-box" src="images/linkedin.jpg"/>
+						<img class="horizontal-list-element no-box" src="images/netflix.jpg"/>
+						<img class="horizontal-list-element no-box" src="images/mutualOfOmaha.jpg"/>
+					</div>
+					<aside class="notes">
+						Groovy is the main focus of today’s session and the foundation of the Gr8 ecosystem of technologies.
+						To start, Groovy is a dynamic compiled language for the JVM.  That mean’s it’s dynamic like languages you may know like Python and PHP, but compiled for efficiency to run on the Java Virtual Machine aka the JVM.
+						Many of you may be asking, why learn yet another programming language? And granted, Groovy is not the best language for every situation.
+						However, in a setting where productivity is paramount and you are looking for the stability of the known architecture stack like Java, Groovy is the best choice.
+						As you’ll see, Groovy’s easy to learn, flexible syntax and interoperability with existing Java libraries, make it a great language to add to your repertoire.
+					</aside>
+				</section>
+
+				<section>
+					<ul>
+						<li>Open source -- maintained by <a href="http://www.pivotal.io/oss" target="_blank">Pivotal</a> and programmers like you!</li>
+						<li><a href="http://groovy-lang.org" target="_blank">http://groovy-lang.org</a></li>
+						<li>contribute: <a href="https://github.com/groovy/groovy-core" target="_blank">https://github.com/groovy/groovy-core</a></li>
+					</ul>
+					<aside class="notes">
+						Groovy  is also open source.  The repository for core is on github and anyone can submit a PR. It's under active development and the community is pretty friendly and welcoming to newcomers.
+					</aside>
+				</section>
+
+				<section>
+					<h2>The Groovy Ecosystem</h2>
+					<ul class="column">
+						<li><img class="no-box inline-image" src="images/grails.jpg"/><a href="http://grails.org"
+																						 target="_blank"> Grails</a>
+						</li>
+						<li><img class="no-box inline-image" src="images/griffon.jpg"/><a
+								href="http://griffon.codehaus.org" target="_blank"> Griffon</a></li>
+						<li><img class="no-box inline-image" src="images/gradle.jpg"/><a
+								href="http://gradle.codehaus.org" target="_blank"> Gradle</a></li>
+					</ul>
+					<ul class="column">
+						<li><img class="no-box inline-image" src="images/missingImage.png"/><a
+								href="https://code.google.com/p/spock/" target="_blank"> Spock</a> and <a
+								href="http://www.gebish.org/">Geb</a></li>
+						<li><img class="no-box inline-image" src="images/ratpack.jpg"/><a href="https://ratpack.io"
+																						  target="_blank"> Ratpack</a>
+						</li>
+						<li><img class="no-box inline-image" src="images/missingImage.png"/> And Many More!</li>
+					</ul>
+					<aside class="notes">
+						Once you learn the Groovy language, you are open to a whole new world of technologies
+						including:
+						Grails (the most common web framework in the Groovy eco-system and what many confuse with
+						Groovy itself.)
+						Griffon a desktop framework
+						Gradle a popular build tool that can even be used for building android applications
+						Spock and Geb testing frameworks
+						Ratpack up and coming lightweight web framework (used for this presentation)
+					</aside>
+				</section>
+
 				<section>
 					<section>
 						<h2>Vertical Slides</h2>
