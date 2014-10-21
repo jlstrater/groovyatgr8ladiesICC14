@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 	<head>
 		<meta charset="utf-8">
@@ -55,7 +55,8 @@
 				<section>
 					<h2>Who am I?</h2>
 					<a href="http://altegrahealth.com" target="_blank"><img class="no-box" src="images/altegra.png"/></a>
-					<p>Software Engineer -- Healthcare Communications Division -- Minneapolis, MN</p>
+					<p>Software Engineer</p>
+					<p>Healthcare Communications Division</p><p>Minneapolis, MN</p>
 					</p>
 					<a href="http://gr8ladies.org" target="_blank"><img class="no-box" src="images/gr8ladiesSquare.jpg" height="150px" width="150px"/></a>
 					<p>Co-Founder</p>
@@ -143,6 +144,16 @@
 				</section>
 
 				<section>
+					<h2>Groovy Architecture</h2>
+					<img class="no-box" src="images/GroovyStack.jpg"/>
+					<aside class="notes"/>
+						You may be wondering how all of this fits together.  An important thing to note is that Groovy is compiled into bytecode for the JVM.  Groovy is NOT compiled into Java.
+						This is how groovy can be used in so many different applications.  Also notice how a framework like Grails can sit on top of and pull in existing Java libraries and frameworks
+						like Spring and Hibernate.
+					</aside>
+				</section>
+
+				<section>
 					<h2>When to use Groovy</h2>
 					<ul>
 						<li>existing java libraries</li>
@@ -169,9 +180,10 @@
 
 				<section>
 					<h2>Hello, Code Camp!</h2>
-					<pre><code data-trim contenteditable>
+					<pre><code data-trim contenteditable id="code">
 						println "Hello, Iowa Code Camp!"
-						</code></pre>
+						</code></pre> <button id="codeRunner">Run</button>
+					<pre><code id="result"></code></pre>
 					<aside class="notes">
 						You can do anything you can do in Java in Groovy. In fact, Almost all Java code is valid Groovy code. Groovy, however, usually has a way to do things with less typing than Java.
 						One big thing you’ll notice is that in Groovy, you don’t always have to declare a function and then call it.
@@ -487,6 +499,7 @@ function linkify( selector ) {
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
+		<script src="js/main.js"></script>
 
 		<script>
 
