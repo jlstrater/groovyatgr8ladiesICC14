@@ -8,7 +8,7 @@ ratpack {
     }
 
     post("eval") {
-      return evaluate(request.body)
+      return evaluate(request.body.toString())
     }
     assets "public"
   }
