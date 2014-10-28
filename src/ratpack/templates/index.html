@@ -55,6 +55,11 @@
         <small>Created by <a href="http://sites.google.com/site/jenniferstrater" target="_blank">Jenn Strater</a> / <a
                 href="http://twitter.com/jennstrater" target="_blank">@jennstrater</a></small>
     </p>
+    <aside class="notes">
+        Hello and Thank you for attending my session Groovy at Gr8Ladies.
+        Today I will be going through an interactive introduction to the programming language Groovy and using examples
+        from our organization Gr8Ladies.
+    </aside>
 </section>
 
 <section>
@@ -72,8 +77,9 @@
 
     <p>Co-Founder</p>
     <aside class="notes">
-        Of course you are probably wondering who we are. First, I’m Jenn Strater. I’m a software engineer in the
-        healthcare communications division of a healthcare services company called Altegra Health.
+        Of course you are probably wondering who I am. First, I’m Jenn Strater. I’m a software engineer in the
+        healthcare communications division of a healthcare services company called Altegra Health. Quick pitch, we're
+        hiring!
         After hours, I work with my co-founder Allison to run the organization Gr8Ladies. My focus in gr8ladies is on
         retention and professional development within the Groovy ecosystem.
     </aside>
@@ -182,7 +188,8 @@
     <h2>Groovy Architecture</h2>
     <img class="no-box" src="images/GroovyStack.jpg"/>
     <aside class="notes"/>
-    You may be wondering how all of this fits together. An important thing to note is that Groovy is compiled into
+    You may be wondering how all of this fits together.(explain graphic)
+    An important thing to note is that Groovy is compiled into
     bytecode for the JVM. Groovy is NOT compiled into Java.
     This is how groovy can be used in so many different applications. Also notice how a framework like Grails can sit on
     top of and pull in existing Java libraries and frameworks
@@ -217,6 +224,14 @@
 
     <p>Shell</p>
     <img class="no-box" src="images/groovyShell.png" height="200px"/>
+
+    <p><a href="http://groovyconsole.appspot.com" target="_blank">http://groovyconsole.appspot.com</a></p>
+    <aside class="notes">
+        There are a few different ways to try out groovy. The first is the interactive swing console. If you're looking
+        for quick and dirty, you can also try the shell.
+        If you don't want to download groovy yet, you can try the interactive web console at groovyconsole.appspot.com.
+        Feel free to follow along if the wifi is any good in here.
+    </aside>
 </section>
 
 <section>
@@ -224,7 +239,6 @@
 					<pre><code data-trim contenteditable id="code">
                         println "Hello, Iowa Code Camp!"
                     </code></pre>
-    <button id="codeRunner">Run</button>
 					<pre><code id="result">
                         -> Hello, Iowa Code Camp!
                     </code></pre>
@@ -265,8 +279,39 @@
 </section>
 
 <section>
-	<h2>Strings</h2>
-	<p>(examples in console)</p>
+    <h2>Strings</h2>
+
+    <p>(examples in console)</p>
+</section>
+
+<section>
+    <section>
+        <h2>Collections</h2>
+    </section>
+    <section>
+        <h2>Lists</h2>
+        (examples in console)
+    </section>
+    <section>
+        <h2>Maps</h2>
+        (examples in console)
+    </section>
+</section>
+
+<section>
+    <h2>Functions</h2>
+    <pre><code>
+        int double(int x) {
+        x * 2
+        }
+    </code><code class="fragment">
+        double(2)</code><code class="fragment">
+        --> 4 </code><code class="fragment">
+        double 8</code><code class="fragment">
+        --> 16</code></pre>
+    <aside class="notes">
+        In order to talk about our next data type closures, I should probably start with how functions work in general.
+    </aside>
 </section>
 
 </div>
