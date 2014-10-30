@@ -77,11 +77,16 @@
 
     <p>Co-Founder</p>
     <aside class="notes">
-        Of course you are probably wondering who I am. First, I’m Jenn Strater. I currently live in Minneapolis, MN where
-        I am a software engineer in the healthcare communications division of a healthcare services company called Altegra Health.
-        Quick pitch, we're hiring! http://altegrahealth.force.com/careers/ts2__JobDetails?jobId=a0xE0000004tgK2IAI&tSource=
-        After hours, I work with my co-founder Allison to run the organization Gr8Ladies. My focus in gr8ladies is on
-        retention and professional development within the Groovy ecosystem.
+        Of course you are probably wondering who I am. First, I’m Jenn Strater. I grew up on the east coast and I
+        currently live in Minneapolis, MN where
+        I am a software engineer in the healthcare communications division of a healthcare services company called
+        Altegra Health.
+        Quick pitch, we're hiring!
+        http://altegrahealth.force.com/careers/ts2__JobDetails?jobId=a0xE0000004tgK2IAI&tSource=
+        After hours, I work with Gr8Ladies co-founder Allison to run the organization Gr8Ladies. My focus in Gr8Ladies
+        is on
+        retention and professional development within the Groovy ecosystem. If you want to know more, please come to the
+        panel "How Getting Involved In The Community Changed My Life" at 3:45 in Garmin 108.
     </aside>
 </section>
 
@@ -245,13 +250,36 @@
     <p>Shell</p>
     <img class="no-box" src="images/groovyShell.png" height="200px"/>
 
-    <p><a href="http://groovyconsole.appspot.com" target="_blank">http://groovyconsole.appspot.com</a></p>
     <aside class="notes">
         There are a few different ways to try out groovy. The first is the interactive swing console. If you're looking
         for quick and dirty, you can also try the shell.
+    </aside>
+</section>
+
+<section>
+    <h2>Follow along</h2>
+
+    <p><a href="http://groovyconsole.appspot.com" target="_blank">http://groovyconsole.appspot.com</a></p>
+    <aside class="notes">
         If you don't want to download groovy yet, you can try the interactive web console at groovyconsole.appspot.com.
         Feel free to follow along if the wifi is any good in here.
     </aside>
+</section>
+
+<section>
+    <h2>Basic rules for learning Groovy</h2>
+    <ol>
+        <li>There is more than one way to do almost anything.</li>
+        <li>It's probably optional.
+            <ul>
+                <li>semi-colons</li>
+                <li>typing</li>
+                <li>parenthesis around parameters</li>
+                <li>return statements</li>
+            </ul>
+        </li>
+        <li>The last command executed is what's returned by default.</li>
+    </ol>
 </section>
 
 <section>
@@ -286,7 +314,8 @@
         <li>Def</li>
     </ul>
     <aside class="notes">
-        We will look at a few datatypes in this workshop: In addition to your normal primitives(int, bool, etc), there are Strings,
+        We will look at a few datatypes in this workshop: In addition to your normal primitives(int, bool, etc), there
+        are Strings,
         Collections, and Closures.
         Collections include classes such as Lists and Maps. Groovy Lists correspond with Java ArrayLists and Groovy Maps
         correspond with Java HashMaps.
@@ -302,24 +331,80 @@
     <h2>Strings</h2>
 
     <p>(examples in console)</p>
+    <aside class="notes">
+        Groovy has many types of strings, but today we’ll go over the three main types: Single Quoted, Double Quoted and
+        Multi-Line Strings.
+        First the single quoted string is for plain text. For example, ‘Hello, World!’
+        Double Quotes can be used to inject code into the text of the string. For example, “Hello, $name”. Name is a
+        variable, the dollar sign tells Groovy to inject its value into the string.
+
+        If you need a particularly long section of text, use multi-line strings by denoting three quotes followed by
+        your text and ended by another three quotation marks.
+        Just like before, use single quotes for plain text and double quotes if you need to embed code.
+
+        You can manipulate Strings easily using the automatically generated String function split and the List function
+        join.
+
+        Pass a string to tokenize and it will split the String based on that as a delimiter. I heart Groovy is split on
+        the spaces and the heart to create two Strings, I and Groovy.
+
+        Pass a token to join and a list of Strings will be transformed with that token inserted as a separator. I,
+        heart, and Groovy can be transformed to the single String, I heart Groovy.
+    </aside>
 </section>
 
 <section>
     <section>
         <h2>Collections</h2>
+        <aside class="notes">
+            Collections are groups of values like a group of numbers.
+        </aside>
     </section>
     <section>
         <h2>Lists</h2>
         (examples in console)
+        <aside class="notes">
+            The first and simplest type of Groovy collection is a list. Lists can have elements of different types– the
+            same List can hold both Strings and integers.
+            To define a list, bound your list in square brackets and separate the items with commas.
+
+            To access elements of the list, use square brackets. Just like in Java, indices start at 0, so the index of
+            the number 2 is 2, not 3.
+            Here, we have changed the third element in the list to 3.
+
+            You can easily append elements onto the end of the list using the shovel operator, which is two “less than”
+            signs. To append means to add to the end.
+
+            Collections have many available methods including basic mathematic operations plus, minus, and multiply.
+            Here, I can use my list and multiply it by two. When you multiply the entire collection, it takes all of the
+            elements in the list and duplicates them.
+        </aside>
     </section>
     <section>
         <h2>Maps</h2>
         (examples in console)
+        <aside class="notes">
+            Maps are like lists but with keys instead of numerical indices. The keys and values are separated by colons
+            then separated from other pairs with commas.
+
+            You can access the values in a Map using a dot then the keyname. This is like getting a member of a Java
+            class.
+            For example, we can do myMap dot val1 to get the String a. This works for both getters and setters.
+            To set the value for the key val4 to 5, we can use myMap.val4 = 5.
+
+            You can also separate out the keys and values by accessing the .values() and .keySet() methods on the map.
+            Here we see the values of myMap displayed as a list.
+        </aside>
     </section>
     <section>
         <h2>Ranges</h2>
         <pre><code>(1..10)
-        --> [1,2,3,4,5,6,7,8,9,10]</code></pre>
+            -->[1,2,3,4,5,6,7,8,9,10]
+        </code></pre>
+        <aside class="notes">
+            Any time you have an incremental group of numbers, you can use a range. Ranges are specified inclusively
+            unless otherwise specified.
+        </aside>
     </section>
 </section>
 
@@ -361,6 +446,30 @@
     <h2>Closures</h2>
     <p>Code as Data</p>
     (to the console!)
+    <aside class="notes">
+        Now, we’ll talk about closures. Closures are not completely unique to Groovy and other languages use similar
+        concepts.
+        Recently, Java 8, introduced a similar feature -- lambdas.
+
+        By definition, closures are code as data. That means that they are pieces of functionality that can be passed
+        around like variables including as a parameter to another function.
+
+        Here is the syntax for defining and using a closure. It is like defining a variable; we start with specifying a
+        type and a name.
+        After the equals sign we include the body of the function in curly braces. Unlike a standard function
+        definition,
+        parameters are included immediately after the first curly brace and before an arrow which indicates the start of
+        the body.
+        Multiple parameters are separated by commas and any default parameters are indicated with an equals followed by
+        the default value.
+
+        You can call a closure by using the built-in function called “call” followed by the parameter(s).
+        myClosure has two parameters, named name and year. You could have also have only one or no parameters at all.
+        Typing your parameters is also optional.
+
+        Just like with functions, return statements are optional. Unless otherwise specified, the last line of a closure
+        is what's returned.
+    </aside>
 </section>
 
 <section>
@@ -371,6 +480,42 @@
         <li>Collect</li>
         <li>Spread Dot</li>
     </ul>
+</section>
+
+
+<section>
+    <h2>Basic Loops</h2>
+    <pre><code>
+        List dl = []
+        for(int i = 2; i <= 6; i=i+2) {
+        dl<< i * 2
+        }
+        println dl
+        --> [4,8,12]</code></pre>
+    <pre><code class="fragment">
+        List dl = []
+        for(i in [2,4,6]) {
+        dl << i * 2
+        }
+        println dl
+        --> [4,8,12]
+    </code></pre>
+    <aside class="notes">
+        Basic Groovy for loops are very similar to Java for loops, but in Groovy, you can very easily iterate over a
+        list of things.
+        In Java, you’re restricted to iterating over a range of numbers.
+        So, you would have to iterate over the indices and then index into the list of numbers that you want to double.
+
+        In the Groovy loop, we declare the variable i to be our iterator. First we grab 2 from the list and set I equal
+        to it.
+        Then we double it. Then we grab 4 and set I equal to it, then 6. We could have done this same loop many ways in
+        Groovy.
+    </aside>
+</section>
+
+<section>
+    <h2>Each</h2>
+
 </section>
 
 </div>
