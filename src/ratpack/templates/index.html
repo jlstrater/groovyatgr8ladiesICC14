@@ -80,12 +80,10 @@
         Of course you are probably wondering who I am. First, I’m Jenn Strater. I grew up on the east coast and I
         currently live in Minneapolis, MN where
         I am a software engineer in the healthcare communications division of a healthcare services company called
-        Altegra Health.
-        Quick pitch, we're hiring!
+        Altegra Health.  Quick pitch, we're hiring!
         http://altegrahealth.force.com/careers/ts2__JobDetails?jobId=a0xE0000004tgK2IAI&tSource=
         After hours, I work with Gr8Ladies co-founder Allison to run the organization Gr8Ladies. My focus in Gr8Ladies
-        is on
-        retention and professional development within the Groovy ecosystem. If you want to know more, please come to the
+        is on retention and professional development within the Groovy ecosystem. If you want to know more, please come to the
         panel "How Getting Involved In The Community Changed My Life" at 3:45 in Garmin 108.
     </aside>
 </section>
@@ -116,7 +114,6 @@
         my sessions
         more of an active discussion. Chances are I may say something wrong or in a way that's confusing. Feel free to
         stop me and ask questions at any time.
-        Just prepared that my answer may be "We'll get to it."
     </aside>
 </section>
 
@@ -278,12 +275,12 @@
                 <li>return statements</li>
             </ul>
         </li>
-        <li>The last command executed is what's returned by default.</li>
+        <li>By default, the last command executed is what's returned.</li>
     </ol>
 </section>
 
 <section>
-    <h2>Hello, Code Camp!</h2>
+    <h2>Hello,World!</h2>
         <pre><code data-trim contenteditable id="code">
             println "Hello, Iowa Code Camp!"
         </code></pre>
@@ -314,9 +311,8 @@
         <li>Def</li>
     </ul>
     <aside class="notes">
-        We will look at a few datatypes in this workshop: In addition to your normal primitives(int, bool, etc), there
-        are Strings,
-        Collections, and Closures.
+        We will look at a few datatypes in this workshop: In addition to your normal primitives(int, bool, etc),
+        there are Strings, Collections, and Closures.
         Collections include classes such as Lists and Maps. Groovy Lists correspond with Java ArrayLists and Groovy Maps
         correspond with Java HashMaps.
         Closures are pieces of functionality that you can pass around as data.
@@ -335,7 +331,7 @@
         Groovy has many types of strings, but today we’ll go over the three main types: Single Quoted, Double Quoted and
         Multi-Line Strings.
         First the single quoted string is for plain text. For example, ‘Hello, World!’
-        Double Quotes can be used to inject code into the text of the string. For example, “Hello, $name”. Name is a
+        Double Quotes can be used to inject code into the text of the string. For example, “Hello, (dollar) name”. Name is a
         variable, the dollar sign tells Groovy to inject its value into the string.
 
         If you need a particularly long section of text, use multi-line strings by denoting three quotes followed by
@@ -360,6 +356,7 @@
             Collections are groups of values like a group of numbers.
         </aside>
     </section>
+
     <section>
         <h2>Lists</h2>
         (examples in console)
@@ -380,6 +377,7 @@
             elements in the list and duplicates them.
         </aside>
     </section>
+
     <section>
         <h2>Maps</h2>
         (examples in console)
@@ -396,6 +394,7 @@
             Here we see the values of myMap displayed as a list.
         </aside>
     </section>
+
     <section>
         <h2>Ranges</h2>
         <pre><code>(1..10)
@@ -415,12 +414,15 @@
             x * 2
         }
     </code></pre>
-    <p>Flexible, but familiar syntax</p>
-    <ul>Optional
-        <li>parenthesis when calling functions</li>
-        <li>parameter typing</li>
-        <li>return statements</li>
-    </ul>
+    <ul>
+        <li>Flexible, familiar syntax</li>
+        <li>Optional
+            <ul>
+                <li>parenthesis when calling functions</li>
+                <li>parameter typing</li>
+                <li>return statements</li>
+            </ul>
+        </li>
     <aside class="notes">
         In order to talk about our next data type closures, I should probably start with how functions work in general.
         Function calls look very similar to other languages. If nothing else, I hope you remember these three things
@@ -431,7 +433,9 @@
         void)
     </aside>
 </section>
-<section><pre><code class="fragment">
+
+<section>
+    <pre><code>
     double(2)</code><code class="fragment">
     --> 4 </code><code class="fragment">
     double 8</code><code class="fragment">
@@ -486,19 +490,20 @@
 <section>
     <h2>Basic Loops</h2>
     <pre><code>
-        List dl = []
-        for(int i = 2; i <= 6; i=i+2) {
-        dl<< i * 2
+        List dl = [];
+        for(int i=1; i<4; i++){
+            dl.add(i * 2);
         }
-        println dl
-        --> [4,8,12]</code></pre>
+        println dl;
+        --> [2,4,6]
+    </code></pre>
     <pre><code class="fragment">
         List dl = []
-        for(i in [2,4,6]) {
+        for(i in [1,2,3]) {
         dl << i * 2
         }
         println dl
-        --> [4,8,12]
+        --> [2,4,6]
     </code></pre>
     <aside class="notes">
         Basic Groovy for loops are very similar to Java for loops, but in Groovy, you can very easily iterate over a
