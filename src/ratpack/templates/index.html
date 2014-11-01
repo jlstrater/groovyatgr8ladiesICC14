@@ -125,7 +125,7 @@
         <li>Search</li>
         <li>Examples</li>
         <li>Files*</li>
-        <li>APIs & JSON processing*</li>
+        <li>APIs*</li>
     </ul>
     <aside class="notes">
         Originally I had hoped to use direct examples from the Gr8Ladies website but as I'm writing that solo right now(yay oss?)
@@ -143,9 +143,10 @@
         <li>Used by many major companies including:</li>
     </ul>
     <div>
-        <img class="horizontal-list-element no-box" src="images/linkedin.jpg"/>
         <img class="horizontal-list-element no-box" src="images/netflix.jpg"/>
-        <img class="horizontal-list-element no-box" src="images/mutualOfOmaha.jpg"/>
+        <img class="horizontal-list-element no-box" src="images/bestBuy.jpg">
+        <img class="horizontal-list-element no-box" src="images/target.png">
+        <img class="horizontal-list-element no-box" src="images/wellsfargo.jpg">
     </div>
     <aside class="notes">
         Groovy is the main focus of today’s session and the foundation of the Gr8 ecosystem of technologies.
@@ -697,14 +698,13 @@
 </section>
 
 <section>
-    <h2>Api and Json Processing</h2>
+    <h2>APIs</h2>
     <p>(in console)</p>
     <pre><code>
     @Grab(group='org.codehaus.groovy.modules.http-builder',
         module='http-builder', version='0.7.1')
 
     import groovyx.net.http.RESTClient
-    import groovy.json.JsonSlurper
 
     def http = new RESTClient("http://api.icndb.com")
 
