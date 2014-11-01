@@ -123,7 +123,7 @@
         <li>Functions</li>
         <li>Loops</li>
         <li>Search</li>
-        <li>Examples/Puzzles</li>
+        <li>Examples</li>
         <li>Files*</li>
         <li>APIs & JSON processing*</li>
     </ul>
@@ -267,7 +267,7 @@
 </section>
 
 <section>
-    <h2>Basic rules for learning Groovy</h2>
+    <h2>Things To Remember!</h2>
     <ol>
         <li>There is more than one way to do almost anything.</li>
         <li>It's probably optional.
@@ -330,6 +330,11 @@
     <h2>Strings</h2>
 
     <p>(examples in console)</p>
+    <ul>
+        <li>Single Quoted</li>
+        <li>Double Quoted</li>
+        <li>Multi-line</li>
+    </ul>
     <aside class="notes">
         Groovy has many types of strings, but today we’ll go over the three main types: Single Quoted, Double Quoted and
         Multi-Line Strings.
@@ -362,7 +367,13 @@
 
     <section>
         <h2>Lists</h2>
-        (examples in console)
+        <p>(examples in console)</p>
+        <ul>
+            <li>definition</li>
+            <li>get/set value</li>
+            <li>append</li>
+            <li>multiply</li>
+        </ul>
         <aside class="notes">
             The first and simplest type of Groovy collection is a list. Lists can have elements of different types– the
             same List can hold both Strings and integers.
@@ -383,7 +394,12 @@
 
     <section>
         <h2>Maps</h2>
-        (examples in console)
+        <p>(examples in console)</p>
+        <ul>
+            <li>definition</li>
+            <li>get/set by keys</li>
+            <li>get all keys/values</li>
+        </ul>
         <aside class="notes">
             Maps are like lists but with keys instead of numerical indices. The keys and values are separated by colons
             then separated from other pairs with commas.
@@ -400,9 +416,11 @@
 
     <section>
         <h2>Ranges</h2>
-        <pre><code>(1..10)
+        <pre><code>println (1..10)
             -->[1,2,3,4,5,6,7,8,9,10]
         </code></pre>
+        <pre><code>println (1..<10)
+            -->[1,2,3,4,5,6,7,8,9]</code></pre>
         <aside class="notes">
             Any time you have an incremental group of numbers, you can use a range. Ranges are specified inclusively
             unless otherwise specified.
@@ -413,7 +431,7 @@
 <section>
     <h2>Functions</h2>
     <pre><code>
-        int double(int x) {
+        int double(x) {
             x * 2
         }
     </code></pre>
@@ -452,7 +470,12 @@
 <section>
     <h2>Closures</h2>
     <p>Code as Data</p>
-    (to the console!)
+    <p>(to the console!)</p>
+    <ul>
+        <li>code as data</li>
+        <li>definition</li>
+        <li>call</li>
+    </ul>
     <aside class="notes">
         Now, we’ll talk about closures. Closures are not completely unique to Groovy and other languages use similar
         concepts.
@@ -640,6 +663,63 @@
         In these examples, we look for any element in the list which is divisible by 2 but not by 3.
         Find returns only the first key/value pair, and FindAll returns both pairs that fit this description.
     </aside>
+</section>
+
+<section>
+    <section>
+        <h2>File Procesing</h2>
+    </section>
+    <section>
+        <h2>Creating & Writing to Files</h2>
+            <pre><code>
+                def myFile = new File('foo.txt')
+                myFile.write 'hello, world!!\\n'
+                myFile.append('and hello universe!')
+            </code></pre>
+    </section>
+    <section>
+        <h2>Reading Files</h2>
+            <pre><code>
+                def myFile = new File('foo.txt')
+                myFile.eachLine { line ->
+                    def processedLine = line.replaceAll('hello','hi')
+                    println processedLine
+                }</code><code class="fragment">
+                --> hi, world!
+                --> and hi universe!
+            </code></pre>
+    </section>
+</section>
+
+<section>
+    <h2>Let's put it all together</h2>
+    <p>(group coding in console)</p>
+</section>
+
+<section>
+    <h2>Api and Json Processing</h2>
+    <p>(in console)</p>
+    <pre><code>
+    @Grab(group='org.codehaus.groovy.modules.http-builder',
+        module='http-builder', version='0.7.1')
+
+    import groovyx.net.http.RESTClient
+    import groovy.json.JsonSlurper
+
+    def http = new RESTClient("http://api.icndb.com")
+
+    http.get(path: '/jokes/random') { resp, reader ->
+
+        println reader.value.joke
+    }
+    </code></pre>
+</section>
+
+<section>
+    <h2>Questions?</h2>
+    <p>Resources</p>
+    <ul><li><a href="http://groovy-lang.org" target="_blank">http://groovy-lang.og</a></li>
+    <li><a href="http://gr8ladies.org" target="_blank">http:/gr8ladies.org</a></li></ul>
 </section>
 
 </div>
